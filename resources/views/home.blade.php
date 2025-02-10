@@ -10,8 +10,8 @@
                 <div class="col-span-6">
                     <span class="uppercase text-white text-xs font-bold mb-2 block">OutdoorIn</span>
                     <h1 class="text-white font-extrabold text-5xl mb-8">Perlengkapan Terbaik Untuk Perjalanan Terbaik</h1>
-                    <p class="text-stone-100 text-base">
-                       Sewa,Pakai,Jelajah - Sesimpel Itu
+                    <p class="text-stone-900 text-base">
+                        Sewa,Pakai,Jelajah - Sesimpel Itu
                     </p>
                     <button
                         class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Get

@@ -19,8 +19,10 @@ class DatabaseSeeder extends Seeder
         $this->call(SeedersPeralatanSeeder::class);
 
         User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
+            'name' => 'Admin Edelweis',
+            'email' => 'admin@gmail.com',
+            'password' => 'password',
+            'role'=>'admin',
         ]);
     }
 }
