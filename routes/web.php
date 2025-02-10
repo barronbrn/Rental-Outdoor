@@ -33,3 +33,10 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::put('/peralatan/{id}', [PeralatanController::class, 'update'])->name('peralatan.update');
     Route::delete('/peralatan/{id}', [PeralatanController::class, 'destroy'])->name('peralatan.destroy');
 });
+
+
+// Route untuk penyewaan
+Route::middleware(['auth'])->group(function () {
+    Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
+    Route::post('/penyewaan', [PenyewaanController::class, 'store'])->name('penyewaan.store');
+});
