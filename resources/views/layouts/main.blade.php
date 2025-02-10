@@ -35,7 +35,7 @@
                 </button>
             </div>
             <ul
-                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:flex lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                class="hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
                         href="/">Home</a></li>
 
@@ -44,7 +44,6 @@
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
                         href="#">Katalog Produk</a></li>
-
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
                         href="#">Contact</a></li>
@@ -133,9 +132,9 @@
                 </div>
                 <div class="mt-auto">
                     <div class="pt-6">
-                        <a class="block px-4 py-3 mb-3 leading-loose text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
+                        <a class="block px-4 py-3 mb-3  text-xs text-center font-semibold leading-none bg-gray-50 hover:bg-gray-100 rounded-xl"
                             href="#">Sign in</a>
-                        <a class="block px-4 py-3 mb-2 leading-loose text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
+                        <a class="block px-4 py-3 mb-2  text-xs text-center text-white font-semibold bg-blue-600 hover:bg-blue-700  rounded-xl"
                             href="#">Sign Up</a>
                     </div>
                     <p class="my-4 text-xs text-center text-gray-400">

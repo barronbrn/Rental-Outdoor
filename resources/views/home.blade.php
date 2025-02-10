@@ -10,8 +10,8 @@
                 <div class="col-span-6">
                     <span class="uppercase text-white text-xs font-bold mb-2 block">OutdoorIn</span>
                     <h1 class="text-white font-extrabold text-5xl mb-8">Perlengkapan Terbaik Untuk Perjalanan Terbaik</h1>
-                    <p class="text-stone-100 text-base">
-                       Sewa,Pakai,Jelajah - Sesimpel Itu
+                    <p class="text-stone-900 text-base">
+                        Sewa,Pakai,Jelajah - Sesimpel Itu
                     </p>
                     <button
                         class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Get
@@ -44,7 +44,8 @@
                     <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
                         <div class="px-10 max-w-xl">
                             <h2 class="text-2xl text-white font-semibold">Tenda Camping</h2>
-                            <p class="mt-2 text-gray-400">Jelajahi alam tanpa ribet! Sewa tenda praktis, langsung berangkat.</p>
+                            <p class="mt-2 text-gray-400">Jelajahi alam tanpa ribet! Sewa tenda praktis, langsung berangkat.
+                            </p>
                             <button
                                 class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
                                 <span>Sewa Sekarang</span>
@@ -75,6 +76,80 @@
                 </div>
             </div>
 
+
+            {{-- Peralatan Dengan Kategori Camping --}}
+            <div class="mt-16">
+                <h3 class="text-gray-600 text-2xl font-medium">Kategori Camping</h3>
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+                    @foreach ($peralatan as $item)
+                        @if ($item->jenis == 'Camping')
+                            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+                                <div class="relative">
+                                    <img src="{{ $item->foto }}" alt="Gambar Produk" class="w-full h-60 object-cover">
+                                    <button
+                                        class="absolute bottom-2 right-2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-500">
+                                        Sewa Sekarang
+                                    </button>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <h3>Rp. {{ number_format($item->harga, 0, ',', '.') }} / Hari</h3>
+                                    <h3 class="text-gray-700 uppercase">{{ $item->namaPeralatan }}</h3>
+                                    <div class="text-gray-500 mt-2">
+                                        @if (is_array($item->deskripsi))
+                                            @foreach ($item->deskripsi as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @else
+                                            @foreach (explode(', ', $item->deskripsi) as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+
+
+            {{-- Peralatan Dengan Kategori Alat Masak --}}
+            <div class="mt-16">
+                <h3 class="text-gray-600 text-2xl font-medium">Kategori Camping</h3>
+                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+                    @foreach ($peralatan as $item)
+                        @if ($item->jenis == 'Alat Masak')
+                            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
+                                <div class="relative">
+                                    <img src="{{ $item->foto }}" alt="Gambar Produk" class="w-full 5-60 object-cover">
+                                    <button
+                                        class="absolute bottom-2 right-2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-500">
+                                        Sewa Sekarang
+                                    </button>
+                                </div>
+                                <div class="px-5 py-3">
+                                    <h3>Rp. {{ number_format($item->harga, 0, ',', '.') }} / Hari</h3>
+                                    <h3 class="text-gray-700 uppercase">{{ $item->namaPeralatan }}</h3>
+                                    <div class="text-gray-500 mt-2">
+                                        @if (is_array($item->deskripsi))
+                                            @foreach ($item->deskripsi as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @else
+                                            @foreach (explode(', ', $item->deskripsi) as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @endif
+                                    </div>
+                                </div>
+                            </div>
+                        @endif
+                    @endforeach
+                </div>
+            </div>
+
+
+        </div>
     </main>
 
     <footer class="bg-gray-200">
