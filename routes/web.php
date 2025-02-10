@@ -4,11 +4,13 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\PenyewaanController;
 use App\Http\Controllers\PeralatanController;
 use App\Http\Controllers\Admin\AdminController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
 
 // Route untuk Login & Register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');

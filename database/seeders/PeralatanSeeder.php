@@ -21,7 +21,7 @@ class PeralatanSeeder extends Seeder
                 'deskripsi' => json_encode(['Tenda Kapasitas 4-6','Carrier 60L','Sleeping Bag','Headlamp', '1 Set Alat Masak', 'Matras 1','Kompor Portabel 1']),
                 'ketersediaan' => 2,
                 'harga' => 800000.00,
-                'foto' => url('https://down-id.img.susercontent.com/file/id-11134207-7rasi-m5b4w9impfswf8@resize_w450_nl.webp'),
+                'foto' => 'img/pangrango-set.webp',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
@@ -31,12 +31,13 @@ class PeralatanSeeder extends Seeder
                 'deskripsi' => json_encode(['Tenda Kapasitas 4 Orang', 'Sleeping Bag 2', 'Matras 2']),
                 'ketersediaan' => 2,
                 'harga' => 800000.00,
-                'foto' => url('https://www.nusaoutdoor.com/wp-content/uploads/2024/02/eiger-flash-3.webp'),
+                'foto' => 'img/ciremai-set.webp',
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
             [
-                'namaPeralatan' => 'Matras Camping',
+
+                'namaPeralatan' => 'Cikuray Set',
                 'jenis' => 'Camping',
                 'deskripsi' => json_encode(['Tenda Kapasitas 4 Orang', 'Sleeping Bag 2', 'Matras 2']),
                 'ketersediaan' => 2,
@@ -95,7 +96,16 @@ class PeralatanSeeder extends Seeder
                 'created_at' => now(),
                 'updated_at' => now(),
             ],
-            
+            [
+                'namaPeralatan' => 'Set Alat Memasak',
+                'jenis' => 'Alat Masak',
+                'deskripsi' => json_encode(['1 Kompor Portabel', 'Teko', 'Panci Kecil 2', 'Mangkok','Sendok Nasi']),
+                'ketersediaan' => 3,
+                'harga' => 300000.00,
+                'foto' => url('https://down-id.img.susercontent.com/file/id-11134207-7r98p-lt6jxnig3tise5@resize_w450_nl.webp'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
         ]);
     }
 }

@@ -76,6 +76,7 @@
                 </div>
             </div>
 
+
             {{-- Peralatan Dengan Kategori Camping --}}
             <div class="mt-16">
                 <h3 class="text-gray-600 text-2xl font-medium">Kategori Camping</h3>
@@ -130,10 +131,15 @@
                                     <h3>Rp. {{ number_format($item->harga, 0, ',', '.') }} / Hari</h3>
                                     <h3 class="text-gray-700 uppercase">{{ $item->namaPeralatan }}</h3>
                                     <div class="text-gray-500 mt-2">
-                                        @foreach ($item->deskripsi as $desc)
-                                            <!-- Perbaikan di sini -->
-                                            <p>- {{ $desc }}</p>
-                                        @endforeach
+                                        @if (is_array($item->deskripsi))
+                                            @foreach ($item->deskripsi as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @else
+                                            @foreach (explode(', ', $item->deskripsi) as $desc)
+                                                <p>- {{ $desc }}</p>
+                                            @endforeach
+                                        @endif
                                     </div>
                                 </div>
                             </div>
@@ -148,7 +154,7 @@
 
     <footer class="bg-gray-200">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400">Brand</a>
+            <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400">Edelweis</a>
             <p class="py-2 text-gray-500 sm:py-0">All rights reserved</p>
         </div>
     </footer>
