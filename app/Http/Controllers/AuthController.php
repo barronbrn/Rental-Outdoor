@@ -4,19 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
-use Illuminate\Validation\ValidationException;
 
 class AuthController extends Controller
 {
-    //
+    // Menampilkan form registrasi
     public function showRegisterForm()
     {
         return view('auth.register');
     }
 
+    // Proses registrasi
     public function register(Request $request)
     {
         $request->validate([
@@ -29,32 +28,41 @@ class AuthController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            'role' => 'user', // Default role adalah user
         ]);
 
         return redirect()->route('login')->with('success', 'Registrasi berhasil. Silakan login.');
     }
 
+    // Menampilkan form login
     public function showLoginForm()
     {
         return view('auth.login');
     }
 
+    // Proses login
     public function login(Request $request)
     {
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required',
+            'password' => 'required'
         ]);
 
         if (Auth::attempt($request->only('email', 'password'))) {
-            return redirect()->route('home');
+            $user = Auth::user();
+
+            // Redirect berdasarkan role
+            if ($user->role === 'admin') {
+                return redirect()->route('admin.peralatan.index'); // Gunakan nama route yang benar
+            } else {
+                return redirect()->route('home'); // Route untuk user biasa
+            }
         }
 
-        throw ValidationException::withMessages([
-            'email' => ['Email atau password salah.'],
-        ]);
+        return back()->withErrors(['email' => 'Email atau password salah']);
     }
 
+    // Logout user
     public function logout(Request $request)
     {
         Auth::logout();
