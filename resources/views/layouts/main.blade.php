@@ -40,10 +40,10 @@
                         href="/">Home</a></li>
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
-                        href="#">About Us</a></li>
+                        href="/penyewaan">Penyewaan/Rental</a></li>
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
-                        href="#">Category</a></li>
+                        href="#">Katalog Produk</a></li>
 
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
@@ -111,15 +111,15 @@
                     <ul>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                                href="#">Home</a>
+                                href="/home">Home</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                                href="#">About Us</a>
+                                href="/penyewaan">Penyewaan/Rental</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
-                                href="#">Services</a>
+                                href="#">Katalog Produk</a>
                         </li>
                         <li class="mb-1">
                             <a class="block p-4 text-sm font-semibold text-gray-400 hover:bg-blue-50 hover:text-blue-600 rounded"
