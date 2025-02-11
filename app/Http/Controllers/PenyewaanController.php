@@ -9,12 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PenyewaanController extends Controller
 {
-    // public function index()
-    // {
-    //     //
-    //     $peralatan = Peralatan::all(); // Mengambil semua data dari tabel peralatan
-    //     return view('penyewaan.index', compact('peralatan')); 
-    // }
 
     // Tampilkan halaman penyewaan
     public function index()
@@ -27,7 +21,7 @@ class PenyewaanController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'peralatan_id' => 'required|exists:peralatan,id',
+            'peralatan_id' => 'required|exists:peralatans,id',
             'durasi' => 'required|integer|min:1',
             'metode_pembayaran' => 'required|in:transfer_bank,kartu_kredit,e_wallet',
         ]);

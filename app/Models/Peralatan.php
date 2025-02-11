@@ -9,6 +9,7 @@ class Peralatan extends Model
 {
     //
     use HasFactory;
+    protected $table = 'peralatans'; 
     protected $fillable = [
         'namaPeralatan',
         'jenis',
@@ -17,6 +18,7 @@ class Peralatan extends Model
         'harga',
         'foto'
     ];
+
 
     protected $casts = [
         'deskripsi' => 'array', 

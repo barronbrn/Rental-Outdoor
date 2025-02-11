@@ -10,7 +10,7 @@ use App\Http\Controllers\Admin\AdminController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
+// Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
 
 // Route untuk Login & Register
 Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
@@ -21,7 +21,7 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 // Dashboard User
 Route::middleware(['auth'])->group(function () {
-    Route::get('/home', [HomeController::class, 'index'])->name('/home');
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
 });
 
 // Group route admin dengan middleware
@@ -39,4 +39,5 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
 Route::middleware(['auth'])->group(function () {
     Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
     Route::post('/penyewaan', [PenyewaanController::class, 'store'])->name('penyewaan.store');
+    Route::get('/penyewaan/confirm/{id}', [PenyewaanController::class, 'confirm'])->name('penyewaan.confirm');
 });
