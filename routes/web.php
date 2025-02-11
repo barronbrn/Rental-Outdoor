@@ -6,10 +6,14 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PenyewaanController;
 use App\Http\Controllers\PeralatanController;
+use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\Admin\AdminController;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/catalogProduk', [HomeController::class, 'indexCatalog'])->name('catalogProduk');
+Route::get('/katalog/kategori/{jenis}', [HomeController::class, 'filterByCategory'])->name('catalogProduk.jenis');
+
 // Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
 
 // Route untuk Login & Register
@@ -40,4 +44,9 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/penyewaan', [PenyewaanController::class, 'index'])->name('penyewaan.index');
     Route::post('/penyewaan', [PenyewaanController::class, 'store'])->name('penyewaan.store');
     Route::get('/penyewaan/confirm/{id}', [PenyewaanController::class, 'confirm'])->name('penyewaan.confirm');
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/transaksi/{penyewaan}', [TransaksiController::class, 'show'])->name('transaksi.show');
+    Route::post('/transaksi/{penyewaan}/pembayaran', [TransaksiController::class, 'prosesPembayaran'])->name('transaksi.pembayaran');
 });

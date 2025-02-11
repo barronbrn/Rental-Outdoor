@@ -23,7 +23,7 @@ class PenyewaanController extends Controller
         $request->validate([
             'peralatan_id' => 'required|exists:peralatans,id',
             'durasi' => 'required|integer|min:1',
-            'metode_pembayaran' => 'required|in:transfer_bank,kartu_kredit,e_wallet',
+            'tanggal_penyewaan' => 'required',
         ]);
 
         // Ambil data peralatan
@@ -38,12 +38,13 @@ class PenyewaanController extends Controller
             'peralatan_id' => $request->peralatan_id,
             'durasi' => $request->durasi,
             'total_harga' => $total_harga,
-            'metode_pembayaran' => $request->metode_pembayaran,
+            'metode_pembayaran' => 'Menunggu Pembayaran',
+            'tanggal_penyewaan' => now(), // Simpan waktu sekarang
             'status' => 'pending', // Status awal
         ]);
 
         // Redirect ke halaman konfirmasi dengan data penyewaan
-        return redirect()->route('penyewaan.confirm', $penyewaan->id);
+        return redirect()->route('transaksi.show', $penyewaan->id);
     }
 
     // Tampilkan halaman konfirmasi penyewaan

@@ -14,8 +14,8 @@
                         Sewa,Pakai,Jelajah - Sesimpel Itu
                     </p>
                     <button
-                        class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Get
-                        started</button>
+                        class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Sewa
+                        Sekarang</button>
                 </div>
             </div>
         </div>
@@ -65,7 +65,7 @@
                             <p class="mt-2 text-gray-400">Sewa alat masak outdoor, nikmati hidangan lezat di alam bebas.</p>
                             <button
                                 class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
-                                <span>Shop Now</span>
+                                <span>Sewa Sekarang</span>
                                 <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
                                     <path d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
@@ -76,86 +76,101 @@
                 </div>
             </div>
 
-
-            {{-- Peralatan Dengan Kategori Camping --}}
-            <div class="mt-16">
-                <h3 class="text-gray-600 text-2xl font-medium">Kategori Camping</h3>
-                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-                    @foreach ($peralatan as $item)
-                        @if ($item->jenis == 'Camping')
-                            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                <div class="relative">
-                                    <img src="{{ $item->foto }}" alt="Gambar Produk" class="w-full h-60 object-cover">
-                                    <button
-                                        class="absolute bottom-2 right-2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-500">
-                                        Sewa Sekarang
-                                    </button>
-                                </div>
-                                <div class="px-5 py-3">
-                                    <h3>Rp. {{ number_format($item->harga, 0, ',', '.') }} / Hari</h3>
-                                    <h3 class="text-gray-700 uppercase">{{ $item->namaPeralatan }}</h3>
-                                    <div class="text-gray-500 mt-2">
-                                        @if (is_array($item->deskripsi))
-                                            @foreach ($item->deskripsi as $desc)
-                                                <p>- {{ $desc }}</p>
-                                            @endforeach
-                                        @else
-                                            @foreach (explode(', ', $item->deskripsi) as $desc)
-                                                <p>- {{ $desc }}</p>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                </div>
+            {{-- Abotu Us --}}
+            <section id="aboutUs">
+                <div class="w-full py-24 ">
+                    <div class="flex flex-col w-[90%] lg:w-4/5 2xl:w-3/5 mx-auto">
+                        <div class="w-full md:w-4/5 md:mx-auto text-center pt-3 px-4 md:!px-0 ">
+                            <h1 class="text-3xl mt-2 md:text-4xl font-semibold text-gray-800">
+                                Mengapa Memilih <span class="text-emerald-600"> Kami?</span>
+                            </h1>
+                            <p class="text-xl font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-500">
+                                Kami menyediakan peralatan outdoor terbaik dengan kualitas terjamin, harga bersahabat, dan
+                                layanan profesional untuk memastikan pengalaman berpetualang Anda lebih nyaman dan
+                                menyenangkan.
+                            </p>
+                        </div>
+                        <div class="w-full flex flex-col md:flex-row py-6 gap-8">
+                            <div
+                                class="w-full md:w-1/4 flex flex-col justify-items-center shadow-md dark:shadow-lg border-b-4 border-emerald-600 dark:border-y group hover:bg-emerald-600 py-12 px-6 rounded-md transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                    class="text-emerald-600 group-hover:text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
+                                </svg>
+                                <h1
+                                    class="text-2xl mt-2 md:text-3xl  font-semibold text-gray-800 dark:text-gray-800 group-hover:text-white">
+                                    Kualitas Terbaik
+                                </h1>
+                                <p
+                                    class="font-light md:font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-800 group-hover:text-white dark:group-hover:text-gray-200">
+                                    Semua peralatan outdoor kami selalu dalam kondisi prima, terawat, dan siap digunakan
+                                    dalam
+                                    berbagai kondisi alam.
+                                </p>
                             </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
-
-
-            {{-- Peralatan Dengan Kategori Alat Masak --}}
-            <div class="mt-16">
-                <h3 class="text-gray-600 text-2xl font-medium">Kategori Alat Masak</h3>
-                <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
-                    @foreach ($peralatan as $item)
-                        @if ($item->jenis == 'Alat Masak')
-                            <div class="w-full max-w-sm mx-auto rounded-md shadow-md overflow-hidden">
-                                <div class="relative">
-                                    <img src="{{ $item->foto }}" alt="Gambar Produk" class="w-full 5-60 object-cover">
-                                    <button
-                                        class="absolute bottom-2 right-2 p-2 rounded-full bg-blue-600 text-white hover:bg-blue-500">
-                                        Sewa Sekarang
-                                    </button>
-                                </div>
-                                <div class="px-5 py-3">
-                                    <h3>Rp. {{ number_format($item->harga, 0, ',', '.') }} / Hari</h3>
-                                    <h3 class="text-gray-700 uppercase">{{ $item->namaPeralatan }}</h3>
-                                    <div class="text-gray-500 mt-2">
-                                        @if (is_array($item->deskripsi))
-                                            @foreach ($item->deskripsi as $desc)
-                                                <p>- {{ $desc }}</p>
-                                            @endforeach
-                                        @else
-                                            @foreach (explode(', ', $item->deskripsi) as $desc)
-                                                <p>- {{ $desc }}</p>
-                                            @endforeach
-                                        @endif
-                                    </div>
-                                </div>
+                            <div
+                                class="w-full md:w-1/4 flex flex-col justify-items-center shadow-md dark:shadow-lg border-b-4 border-emerald-600 dark:border-y group hover:bg-emerald-600 py-12 px-6 rounded-md transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                    class="text-emerald-600 group-hover:text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm1.31-7.9l-.95.95c-.79.79-1.36 1.48-1.36 3.45h-2c0-2.38.99-3.54 2.06-4.61l1.24-1.26c.46-.46.7-1.1.7-1.76 0-1.38-1.12-2.5-2.5-2.5S9 7.62 9 9H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.11-.45 2.17-1.19 2.91z" />
+                                </svg>
+                                <h1
+                                    class="text-2xl mt-2 md:text-3xl  font-semibold text-gray-800 dark:text-gray-800 group-hover:text-white">
+                                    Harga Terjangkau
+                                </h1>
+                                <p
+                                    class="font-light md:font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-800 group-hover:text-white dark:group-hover:text-gray-200">
+                                    Kami menawarkan harga sewa yang kompetitif, sehingga Anda bisa menikmati petualangan
+                                    tanpa
+                                    menguras dompet.
+                                </p>
                             </div>
-                        @endif
-                    @endforeach
-                </div>
-            </div>
 
+                            <div
+                                class="w-full md:w-1/4 flex flex-col justify-items-center shadow-md dark:shadow-lg border-b-4 border-emerald-600 dark:border-y group hover:bg-emerald-600 py-12 px-6 rounded-md transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                    class="text-emerald-600 group-hover:text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M13 3c-5.5 0-10 4.5-10 10s4.5 10 10 10 10-4.5 10-10-4.5-10-10-10zm1 17h-2v-6h2v6zm0-8h-2V7h2v5z" />
+                                </svg>
+                                <h1
+                                    class="text-2xl mt-2 md:text-3xl font-semibold text-gray-800 dark:text-gray-800 group-hover:text-white">
+                                    Layanan Cepat
+                                </h1>
+                                <p
+                                    class="font-light md:font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-800 group-hover:text-white dark:group-hover:text-gray-200">
+                                    Proses pemesanan dan pengambilan barang yang mudah dan cepat, tanpa ribet.
+                                </p>
+                            </div>
+                            <div
+                                class="w-full md:w-1/4 flex flex-col justify-items-center shadow-md dark:shadow-lg border-b-4 border-emerald-600 dark:border-y group hover:bg-emerald-600 py-12 px-6 rounded-md transition-all duration-500">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" fill="currentColor"
+                                    class="text-emerald-600 group-hover:text-white" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 17c-3.86 0-7-3.14-7-7s3.14-7 7-7 7 3.14 7 7-3.14 7-7 7z" />
+                                    <path d="M10 16.5l6-4.5-6-4.5z" />
+                                </svg>
+                                <h1
+                                    class="text-2xl mt-2 md:text-3xl  font-semibold text-gray-800 dark:text-gray-800 group-hover:text-white">
+                                    Beragam Pilihan
+                                </h1>
+                                <p
+                                    class="font-light md:font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-800 group-hover:text-white dark:group-hover:text-gray-200">
+                                    Kami memiliki berbagai macam perlengkapan outdoor, mulai dari tenda, sleeping bag,
+                                    carrier,
+                                    hingga peralatan masak.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </div>
     </main>
 
-    <footer class="bg-gray-200">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="text-xl font-bold text-gray-500 hover:text-gray-400">Edelweis</a>
-            <p class="py-2 text-gray-500 sm:py-0">All rights reserved</p>
-        </div>
-    </footer>
+
+    </main>
 @endsection

@@ -14,6 +14,7 @@ class Penyewaan extends Model
         'durasi',
         'total_harga',
         'metode_pembayaran',
+        'tanggal_penyewaan',
         'status',
     ];
 

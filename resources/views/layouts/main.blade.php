@@ -43,10 +43,10 @@
                         href="/penyewaan">Penyewaan/Rental</a></li>
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
-                        href="#">Katalog Produk</a></li>
+                        href="/catalogProduk">Katalog Produk</a></li>
 
                 <li><a class="rounded-md px-3 py-2 font-medium text-sm text-gray-700 hover:text-white hover:underline hover:bg-gray-700"
-                        href="#">Contact</a></li>
+                        href="#aboutUs">About Us</a></li>
             </ul>
 
             @auth
@@ -146,6 +146,30 @@
     </header>
 
     @yield('content')
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between">
+            <div>
+                <h3 class="text-xl font-bold">Edelweis Outdoor</h3>
+                <p class="text-gray-400 mt-2">Sewa perlengkapan outdoor terbaik untuk perjalanan Anda.</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold">Kontak Kami</h3>
+                <p class="text-gray-400">Email: support@edelweis.com</p>
+                <p class="text-gray-400">Telepon: +62 812-3456-7890</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold">Ikuti Kami</h3>
+                <div class="flex mt-2 space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white">Facebook</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Instagram</a>
+                    <a href="#" class="text-gray-400 hover:text-white">Twitter</a>
+                </div>
+            </div>
+        </div>
+        <div class="text-center text-gray-400 mt-6">&copy; 2025 Edelweis Outdoor. All rights reserved.</div>
+    </footer>
 
 
 

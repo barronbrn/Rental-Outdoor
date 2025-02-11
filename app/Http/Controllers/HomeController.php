@@ -17,6 +17,18 @@ class HomeController extends Controller
         return view('home', compact('peralatan')); 
     }
 
+    public function indexCatalog()
+    {
+        $peralatan = Peralatan::all(); // Ambil semua peralatan
+        return view('catalogProduk', compact('peralatan'));
+    }
+
+    public function filterByCategory($jenis)
+    {
+        $peralatan = Peralatan::where('jenis', $jenis)->get(); // Ambil produk berdasarkan jenis
+        return view('catalogProduk', compact('peralatan', 'jenis'));
+    }
+
     /**
      * Show the form for creating a new resource.
      */
