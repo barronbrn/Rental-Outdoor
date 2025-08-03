@@ -35,7 +35,15 @@
                     data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                    <li><a class="dropdown-item" href="#!">Logout</a></li>
+                    <li>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                        <a class="dropdown-item" href="#"
+                            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                            Logout
+                        </a>
+                    </li>
                 </ul>
             </li>
         </ul>
@@ -52,11 +60,11 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             Kelola Peralatan
                         </a>
-                        <a class="nav-link" href="/admin/peralatan">
+                        <a class="nav-link" href="/admin/penyewaan">
                             <div class="sb-nav-link-icon"><i class=""></i></div>
                             Kelola Penyewaan
                         </a>
-                        
+
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">
@@ -70,7 +78,7 @@
             <main>
 
                 @yield('content')
-                
+
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}

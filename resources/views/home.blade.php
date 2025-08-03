@@ -8,13 +8,13 @@
             <img src="https://picsum.photos/seed/picsum/1900/850" class="absolute top-0 left-0 min-h-full ob" alt="">
             <div class="relative z-20 max-w-screen-lg mx-auto grid grid-cols-12 h-full items-center">
                 <div class="col-span-6">
-                    <span class="uppercase text-white text-xs font-bold mb-2 block">OutdoorIn</span>
+                    <span class="uppercase text-emerald text-6xl font-bold mb-2 block">Edelweis Outdoor</span>
                     <h1 class="text-white font-extrabold text-5xl mb-8">Perlengkapan Terbaik Untuk Perjalanan Terbaik</h1>
-                    <p class="text-stone-900 text-base">
+                    <p class="text-stone-900 text-xl">
                         Sewa,Pakai,Jelajah - Sesimpel Itu
                     </p>
                     <button
-                        class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-white hover:bg-opacity-10">Sewa
+                        class="mt-8 text-white uppercase py-4 text-base font-light px-10 border border-white hover:bg-emerald-600 hover:bg-opacity-50">Sewa
                         Sekarang</button>
                 </div>
             </div>
@@ -22,13 +22,13 @@
         <div class="m-5"></div>
         <div class="container mx-auto px-6">
             <div class="h-64 rounded-md overflow-hidden bg-cover bg-center"
-                style="background-image: url('https://cdn.pixabay.com/photo/2021/11/03/12/28/forest-6765636_640.jpg')">
+                style="background-image: url('https://wallpaperaccess.com/full/9384757.jpg')">
                 <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
                     <div class="px-10 max-w-xl">
                         <h2 class="text-2xl text-white font-semibold">Kategori</h2>
-                        <p class="mt-2 text-gray-400">Menyewakan segala jenis alat-alat outdoor.</p>
+                        <p class="mt-2 text-white">Menyewakan segala jenis alat-alat outdoor.</p>
                         <button
-                            class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
+                            class="flex items-center mt-4 px-3 py-2 bg-emerald-600 text-white text-sm uppercase font-medium rounded hover:bg-white hover:text-black focus:outline-none focus:bg-emerald-600">
                             <span>Sewa Sekarang!</span>
                             <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round"
                                 stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,14 +40,14 @@
             </div>
             <div class="md:flex mt-8 md:-mx-4">
                 <div class="w-full h-64 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:w-1/2"
-                    style="background-image: url('https://cdn.pixabay.com/photo/2018/12/24/22/19/camping-3893587_640.jpg')">
+                    style="background-image: url('https://tse2.mm.bing.net/th/id/OIP.ys8NlsBvdVKDHpUytREtKAHaFk?w=1334&h=1004&rs=1&pid=ImgDetMain&o=7&rm=3')">
                     <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
                         <div class="px-10 max-w-xl">
                             <h2 class="text-2xl text-white font-semibold">Tenda Camping</h2>
-                            <p class="mt-2 text-gray-400">Jelajahi alam tanpa ribet! Sewa tenda praktis, langsung berangkat.
+                            <p class="mt-2 text-white">Jelajahi alam tanpa ribet! Sewa tenda praktis, langsung berangkat.
                             </p>
                             <button
-                                class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                class="flex items-center mt-4 px-3 py-2 bg-emerald-600 text-white text-sm uppercase font-medium rounded hover:bg-white hover:text-black focus:outline-none focus:bg-emerald-600">
                                 <span>Sewa Sekarang</span>
                                 <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -62,9 +62,9 @@
                     <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
                         <div class="px-10 max-w-xl">
                             <h2 class="text-2xl text-white font-semibold">Alat Memasak</h2>
-                            <p class="mt-2 text-gray-400">Sewa alat masak outdoor, nikmati hidangan lezat di alam bebas.</p>
+                            <p class="mt-2 text-white">Sewa alat masak outdoor, nikmati hidangan lezat di alam bebas.</p>
                             <button
-                                class="flex items-center mt-4 text-white text-sm uppercase font-medium rounded hover:underline focus:outline-none">
+                                class="flex items-center mt-4 px-3 py-2 bg-emerald-600 text-white text-sm uppercase font-medium rounded hover:bg-white hover:text-black focus:outline-none focus:bg-emerald-600">
                                 <span>Sewa Sekarang</span>
                                 <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" viewBox="0 0 24 24" stroke="currentColor">
@@ -84,7 +84,7 @@
                             <h1 class="text-3xl mt-2 md:text-4xl font-semibold text-gray-800">
                                 Mengapa Memilih <span class="text-emerald-600"> Kami?</span>
                             </h1>
-                            <p class="text-xl font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-gray-500">
+                            <p class="text-xl font-thin mb-4 line-clamp-4 mt-4 md:line-clamp-none text-black">
                                 Kami menyediakan peralatan outdoor terbaik dengan kualitas terjamin, harga bersahabat, dan
                                 layanan profesional untuk memastikan pengalaman berpetualang Anda lebih nyaman dan
                                 menyenangkan.
