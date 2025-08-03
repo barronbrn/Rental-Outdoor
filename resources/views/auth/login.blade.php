@@ -13,6 +13,11 @@
         <input type="email" name="email" placeholder="Email" class="w-full p-2 mb-2 border rounded">
         <input type="password" name="password" placeholder="Password" class="w-full p-2 mb-2 border rounded">
         <button type="submit" class="w-full p-2 bg-blue-500 text-white rounded">Login</button>
+        <div class="mt-4 text-center">
+            <p class="text-sm text-gray-600">Belum mempunyai akun? 
+                <a href="{{ route('register') }}" class="text-blue-500 hover:text-blue-700">Register</a>
+            </p>
+        </div>
     </form>
 </body>
 </html>
